@@ -12,7 +12,7 @@ import Emojify from "react-emojione";
 const donationNetworkID = 1; // make sure donations only go through on this network.
 
 const donationAddress = "0x055D0b8e377eb6977AA49A26FD3345209aF9E714"; //replace with the address to watch
-const apiKey = "6DIUB7X6S92YJR6KXKF8V8ZU55IXT5PN2S"; //replace with your own key
+const apiKey = "IHZIQQIWSGIMDMTR7FC5N1C86BE1DIU6ZI"; //replace with your own key
 
 const etherscanApiLink =
   "https://api.etherscan.io/api?module=account&action=txlist&address=" +
