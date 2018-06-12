@@ -281,9 +281,9 @@ class App extends Component {
         >
           <div className="flex-column introColumn">
             <img
-              src="/img/eip0-logo.svg"
+              src="/img/fellowship-logomark.png"
               className="typelogo img-fluid"
-              alt="eip0 logo"
+              alt="ethmagicians logo"
             />
             <div className="introContainer">
               <ol {...responsiveOl}>
@@ -296,15 +296,15 @@ class App extends Component {
                       fixedWidth
                     />
                     <div className="margin-left">
-                      The goal of this event is to discuss on-chain and
-                      off-chain governance and ideally come to terms on
-                      constituting an “EIP0” document a.k.a. a “first Etherean
-                      constitution” stating values and principles that we all
-                      agree on, hopefully going further and laying out a
-                      decision-making process to address the philosophical side
-                      of Ethereum ecosystem governance.{" "}
-                      <a href="https://github.com/ethereum/EIPs">
-                        The Ethereum Improvement Proposal
+                      The Fellowship of Ethereum magicians is a volunteer group. The group runs a <a href="https://ethereum-magicians.org/">community forum</a> and a series of Tri-Annual meetings.
+                      <ul>
+                      <li><strong>The Goal:</strong>To keep Ethereum The Best It Can Technically Be.</li>
+                      <li><strong>The Mission:</strong> To Nurture Community Consensus on the technical direction and specification of Ethereum.</li>
+                      <li><strong>The Work.</strong> Primarily, high-quality Ethereum Improvement Proposals (EIPs), accepted by a consensus of the Community.</li>
+                      </ul>
+                      .{" "}
+                      <a href="https://goo.gl/DrJRJV">
+                        Fellowship Proposal
                       </a>
                     </div>
                   </div>
@@ -318,9 +318,8 @@ class App extends Component {
                       fixedWidth
                     />
                     <div className="margin-left">
-                      The event is self funded, please signal your attendence by
-                      submitting a {""}
-                      <strong>minimum donation of 0.5 ETH</strong>.
+                      The Fellowship of Ethereum Magicians rely on donations and sponsorships to run events, as well as a sponsoring Host organization for each meeting. We recognize and thank all of the organizational and individual sponsorships and donations. As an individual, we recommend a {""}
+                      <strong>minimum donation of 0.05 ETH</strong> per event.
                     </div>
                   </div>
                 </li>
@@ -333,9 +332,7 @@ class App extends Component {
                       fixedWidth
                     />
                     <div className="margin-left">
-                      This event is by invitation only! We want to thank our
-                      hosts <a href="https://l4.ventures/">L4 Ventures</a>, as
-                      well as all sponsors and donors.
+                      Events are open to everyone. We ask for registration to help with communication and to order the right amount of refreshments.
                     </div>
                   </div>
                 </li>
@@ -349,8 +346,7 @@ class App extends Component {
                       fixedWidth
                     />
                     <div className="margin-left">
-                      Mon, Apr 30 - Wed, May 2 (immediately preceding EdCon
-                      2018)
+                      Next event: Berlin Summer Meeting, Sat, July 14 - Sun, July 15. Thank you to our local Host organization & food sponsors, <a href="https://web3.foundation">Web3 Foundation</a>.
                     </div>
                   </div>
                 </li>
@@ -362,7 +358,7 @@ class App extends Component {
                       size="2x"
                       fixedWidth
                     />
-                    <div className="margin-left">Toronto, Canada.</div>
+                    <div className="margin-left">Berlin, Germany at <a href="http://c-base.org/">c-base</a>.</div>
                   </div>
                 </li>
                 <hr />
