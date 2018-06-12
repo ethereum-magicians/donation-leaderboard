@@ -302,10 +302,7 @@ class App extends Component {
                       <li><strong>The Mission:</strong> To Nurture Community Consensus on the technical direction and specification of Ethereum.</li>
                       <li><strong>The Work.</strong> Primarily, high-quality Ethereum Improvement Proposals (EIPs), accepted by a consensus of the Community.</li>
                       </ul>
-                      .{" "}
-                      <a href="https://goo.gl/DrJRJV">
-                        Fellowship Proposal
-                      </a>
+                      Read the <a href="https://goo.gl/DrJRJV">Fellowship Proposal</a> for more information.
                     </div>
                   </div>
                 </li>
@@ -332,7 +329,7 @@ class App extends Component {
                       fixedWidth
                     />
                     <div className="margin-left">
-                      Events are open to everyone. We ask for registration to help with communication and to order the right amount of refreshments.
+                      Events are open to everyone. We ask for registration to help with communication and to order the right amount of refreshments. Please <a href="https://ethereum-magicians.github.io/berlin-council/register/">register for the Berlin event</a>.
                     </div>
                   </div>
                 </li>
