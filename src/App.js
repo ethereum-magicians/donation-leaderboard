@@ -414,6 +414,18 @@ class App extends Component {
             <div className="word-wrap">
               <strong className="donation-address">{donationAddress}</strong>
             </div>
+          
+            <div className="offchainthanks">
+              <h3>Offchain Thanks</h3>
+              <p>Thanks to those of you supporting us offchain in various ways.</p>
+              <h4>Web3 Foundation</h4>
+              <a href="http://web3.foundation"><img src="/img/web3logo_500px.jpg" /></a>
+              <p>Thank you to Web3 Foundation for being our <strong>Host Company</strong> for the Berlin Council, handling logistics, payment, and breakfast & lunch both days.</p>
+              <h4>Livepeer</h4>
+              <a href="http://livepeer.org"><img src="/img/livepeer_600px.png" /></a>
+              <p>Thanks to Livepeer for donating transcoding credits and arranging a video production team in Berlin.</p>
+            </div>
+          
           </div>
         </div>
 
