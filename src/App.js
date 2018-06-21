@@ -414,7 +414,7 @@ class App extends Component {
             <div className="word-wrap">
               <strong className="donation-address">{donationAddress}</strong>
             </div>
-          
+            <hr />
             <div className="offchainthanks">
               <h3>Offchain Thanks</h3>
               <p>Thanks to those of you supporting us offchain in various ways.</p>
