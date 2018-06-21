@@ -385,13 +385,13 @@ class App extends Component {
             />
             {candonate ? (
               <div>
-                <h4 {...hiddenOnMobile}>
-                  Publicly: Send a transaction via Metamask with your Team Name
+                <h4>
+                  Publicly: Send a transaction via Metamask with your Team Name or other info
                   as a message{" "}
                 </h4>
                 {}
 
-                <form {...hiddenOnMobile} onSubmit={this.handleDonate}>
+                <form onSubmit={this.handleDonate}>
                   <input
                     type="text"
                     placeholder="ETH to donate"
@@ -407,7 +407,7 @@ class App extends Component {
             <hr />
             <h4>Privately: Send directly to the donation address</h4>
             <img
-              src="/img/eip0-qr.svg"
+              src="/img/0x85cab7143ff3c01b93e88f5b017692374bb939c2.png"
               className="qr-code"
               alt="Donation QR Code"
             />
