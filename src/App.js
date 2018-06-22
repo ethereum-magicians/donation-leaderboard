@@ -316,7 +316,7 @@ class App extends Component {
                     />
                     <div className="margin-left">
                       The Fellowship of Ethereum Magicians rely on donations and sponsorships to run events, as well as a sponsoring Host organization for each meeting. We recognize and thank all of the organizational and individual sponsorships and donations. As an individual, we recommend a {""}
-                      <strong>minimum donation of 0.05 ETH</strong> per event.
+                      <strong>minimum donation of 0.1 ETH</strong> per event.
                     </div>
                   </div>
                 </li>
