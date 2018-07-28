@@ -419,13 +419,13 @@ class App extends Component {
               <h3>Offchain Thanks</h3>
               <p>Thanks to those of you supporting us offchain in various ways.</p>
               <h4>Web3 Foundation</h4>
-              <a href="http://web3.foundation"><img src="/img/web3logo_500px.jpg" /></a>
+              <a href="http://web3.foundation"><img src="/img/web3logo_500px.jpg" alt="Web3 Foundation logo - web3.foundation" /></a>
               <p>Thank you to Web3 Foundation for being our <strong>Host Company</strong> for the Berlin Council, handling logistics, payment, and breakfast & lunch both days.</p>
               <h4>Santiment</h4>
-              <a href="https://santiment.net/"><img src="/img/santiment_logo_onwhite_500px.png" /></a>
+              <a href="https://santiment.net/"><img src="/img/santiment_logo_onwhite_500px.png" alt="Santiment logo - santiment.net" /></a>
               <p>Thank you to Santiment for sponsoring the video production team for both days!</p>
               <h4>Livepeer</h4>
-              <a href="http://livepeer.org"><img src="/img/livepeer_600px.png" /></a>
+              <a href="http://livepeer.org"><img src="/img/livepeer_600px.png" alt="Livepeer logo - livepeer.org" /></a>
               <p>Thanks to Livepeer for donating transcoding credits and arranging a video production team in Berlin.</p>
             </div>
           
