@@ -1,19 +1,14 @@
 import React, { Component } from "react";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import { css } from "glamor";
+import Web3 from "web3";
+import Emojify from "react-emojione";
 
 import "./App.css";
 
-import { css } from "glamor";
-
-import Web3 from "web3";
-
-import Emojify from "react-emojione";
-
 const donationNetworkID = 1; // make sure donations only go through on this network.
-
 const donationAddress = "0x85cab7143ff3c01b93e88f5b017692374bb939c2"; //replace with the address to watch
 const apiKey = "IHZIQQIWSGIMDMTR7FC5N1C86BE1DIU6ZI"; //replace with your own key
-
 const etherscanApiLink =
   "https://api.etherscan.io/api?module=account&action=txlist&address=" +
   donationAddress +
@@ -274,216 +269,242 @@ class App extends Component {
     });
 
     return (
-      <div className="App container-fluid">
-        <div
-          {...responsiveness}
-          className="flex-row d-flex justify-content-around"
-        >
-          <div className="flex-column introColumn">
-            <img
-              src="/img/fellowship-logomark.png"
-              className="typelogo img-fluid"
-              alt="ethmagicians logo"
-            />
-            <div className="introContainer">
-              <ol {...responsiveOl}>
-                <li>
-                  <div className="media">
-                    <FontAwesomeIcon
-                      icon="clipboard-list"
-                      className="icon"
-                      size="2x"
-                      fixedWidth
-                    />
-                    <div className="margin-left">
-                      The Fellowship of Ethereum magicians is a volunteer group. The group runs a <a href="https://ethereum-magicians.org/">community forum</a> and a series of Tri-Annual meetings.
-                      <ul>
-                      <li><strong>The Goal:</strong>To keep Ethereum The Best It Can Technically Be.</li>
-                      <li><strong>The Mission:</strong> To Nurture Community Consensus on the technical direction and specification of Ethereum.</li>
-                      <li><strong>The Work.</strong> Primarily, high-quality Ethereum Improvement Proposals (EIPs), accepted by a consensus of the Community.</li>
-                      </ul>
-                      Read the <a href="https://goo.gl/DrJRJV">Fellowship Proposal</a> for more information.
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="media">
-                    <FontAwesomeIcon
-                      icon="ticket-alt"
-                      className="icon"
-                      size="2x"
-                      fixedWidth
-                    />
-                    <div className="margin-left">
-                      The Fellowship of Ethereum Magicians rely on donations and sponsorships to run events, as well as a sponsoring Host organization for each meeting. We recognize and thank all of the organizational and individual sponsorships and donations. As an individual, we recommend a {""}
-                      <strong>minimum donation of 0.1 ETH</strong> per event.
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="media">
-                    <FontAwesomeIcon
-                      icon="envelope"
-                      className="icon"
-                      size="2x"
-                      fixedWidth
-                    />
-                    <div className="margin-left">
-                      Events are open to everyone. We ask for registration to help with communication and to order the right amount of refreshments. Please <a href="https://ethereum-magicians.github.io/berlin-council/register/">register for the Berlin event</a>.
-                    </div>
-                  </div>
-                </li>
-                <hr />
-                <li>
-                  <div className="media">
-                    <FontAwesomeIcon
-                      icon="clock"
-                      className="icon"
-                      size="2x"
-                      fixedWidth
-                    />
-                    <div className="margin-left">
-                      Next event: Berlin Summer Meeting, Sat, July 14 - Sun, July 15. Thank you to our local Host organization & food sponsors, <a href="https://web3.foundation">Web3 Foundation</a>.
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="media">
-                    <FontAwesomeIcon
-                      icon="map-marker"
-                      className="icon"
-                      size="2x"
-                      fixedWidth
-                    />
-                    <div className="margin-left">Berlin, Germany at <a href="http://c-base.org/">c-base</a>.</div>
-                  </div>
-                </li>
-                <hr />
-                <li style={{ textAlign: "center" }}>
-                  By donating you support open source projects like this{" "}
-                  <a href="https://github.com/giveth/donation-leaderboard">
-                    donation leaderboard application
-                  </a>.
-                  <br /> Made with{" "}
-                  <FontAwesomeIcon
-                    icon="heart"
-                    className="icon"
-                    size="2x"
-                    fixedWidth
-                  />{" "}
-                  by the Unicorns at Giveth
-                </li>
-              </ol>
+      <div className="App container">
+        <div class="jumbotron jumbotron-fluid">
+          <div className='row text-center'>
+            <div className='col-sm-12 xs-font-sm'>
+              <h1 className='big-title cursive'>
+                <small>The</small> Fellowship <small>of</small> <br/> Ethereum Magicians
+                  <img
+                  src="/img/fellowship-logomark.png"
+                  className="sparkle align-top"
+                  alt="ethmagicians logo"
+                />
+              </h1>
             </div>
           </div>
-
-          <div className="flex-column donationColumn">
-            <img
-              src="/img/ways-to-donate.svg"
-              className="typelogo img-fluid"
-              alt=""
-            />
-            {candonate ? (
+        </div>
+        <div className="row">
+          <div className="col-sm-12">
+            <div>
+              <div className='row justify-content-md-center'>
+                <div className='col-sm-8 col-sm-offset-2'>
+                  <h2 className='text-center'>We are a volunteer group.</h2>
+                </div>
+              </div>
+              <div className='row text-center'>
+                <div className='col-sm-4'>
+                  <h3>
+                    Goal
+                  </h3>
+                  <p>
+                    To keep Ethereum the <strong>best</strong> it can technically be.
+                  </p>
+                </div>
+                <div className='col-sm-4'>
+                  <h3>
+                    Mission
+                  </h3>
+                  <p>
+                    To nurture community consensus on the technical direction and specification of Ethereum.
+                  </p>
+                </div>
+                <div className='col-sm-4'>
+                  <h3>
+                    Work
+                  </h3>
+                  <p>
+                    Primarily, high-quality Ethereum Improvement Proposals (EIPs), accepted by a consensus of the Community.
+                  </p>
+                </div>
+              </div>
               <div>
-                <h4>
-                  Publicly: Send a transaction via Metamask with your Team Name or other info
-                  as a message{" "}
-                </h4>
-                {}
+                <div>
+                  <p className='text-center'>
+                      We run a <a target="_blank"
+                            rel="noopener noreferrer" href="https://ethereum-magicians.org/">community forum</a> and events. Read the <a target="_blank"
+                                  rel="noopener noreferrer" href="https://goo.gl/DrJRJV">Fellowship Proposal</a> for more information.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <form onSubmit={this.handleDonate}>
+        <div className="row">
+          <div className="col-sm-12">
+            <div className='row justify-content-md-center'>
+              <div className='col-sm-8 col-sm-offset-2'>
+                <h2 className='text-center'>We Meet at Tri-Annual Events.</h2>
+              </div>
+            </div>
+
+            <p>
+              <span className='dropcap'>E</span><span className='smallcaps'>vents are</span> open to <strong>everyone</strong>.  We ask for registration to help with communication and to order the right amount of refreshments. We rely on donations and sponsorships to run events, as well as a sponsoring Host organization for each meeting. We recognize and thank all of the organizational and individual sponsorships and donations. As an individual, we recommend a {""}
+                <strong>minimum donation of 0.1 ETH</strong> per event.
+            </p>
+          </div>
+        </div>
+
+
+        <hr />
+
+        <blockquote class="blockquote text-center">
+          By donating you support open source projects like this{" "}
+          <a href="https://github.com/giveth/donation-leaderboard" target="_blank"
+                    rel="noopener noreferrer">
+            donation leaderboard application
+          </a>.
+        </blockquote>
+
+        <hr />
+
+        <div className="row">
+          <div className="col-sm-12">
+            <div className='row justify-content-md-center'>
+              <div className='col-sm-8 col-sm-offset-2'>
+                <h2 className='text-center'>Ways to Donate</h2>
+              </div>
+            </div>
+
+
+            <div className='donate-card card'>
+              <div className='card-body'>
+                <h4 className='card-title'>Publically</h4>
+                <p>
+                  Send a transaction via Metamask with your Team Name or other info as a message:
+                </p>
+
+                <form onSubmit={this.handleDonate} className='form-inline'>
+                  <label className="sr-only" for='amount'>ETH to Donate</label>
                   <input
                     type="text"
+                    className='form-control mb-2 mr-sm-2'
                     placeholder="ETH to donate"
                     name="amount"
                   />
-                  <input type="text" placeholder="Message" name="message" />
-                  <button className="btn btn-secondary">Send</button>
+                  <input
+                    type="text"
+                    className='form-control mb-2 mr-sm-2'
+                    placeholder="Message"
+                    name="message" />
+                  <button type='submit' className="btn btn-primary mb-2">Send</button>
                 </form>
               </div>
-            ) : (
-              <br />
-            )}
-            <hr />
-            <h4>Privately: Send directly to the donation address</h4>
-            <img
-              src="/img/0x85cab7143ff3c01b93e88f5b017692374bb939c2.png"
-              className="qr-code"
-              alt="Donation QR Code"
-            />
-            <div className="word-wrap">
-              <strong className="donation-address">{donationAddress}</strong>
             </div>
-            <hr />
-            <div className="offchainthanks">
-              <h3>Offchain Thanks</h3>
-              <p>Thanks to those of you supporting us offchain in various ways.</p>
-              <h4>Web3 Foundation</h4>
-              <a href="http://web3.foundation"><img src="/img/web3logo_500px.jpg" alt="Web3 Foundation logo - web3.foundation" /></a>
-              <p>Thank you to Web3 Foundation for being our <strong>Host Company</strong> for the Berlin Council, handling logistics, payment, and breakfast & lunch both days.</p>
-              <h4>Santiment</h4>
-              <a href="https://santiment.net/"><img src="/img/santiment_logo_onwhite_500px.png" alt="Santiment logo - santiment.net" /></a>
-              <p>Thank you to Santiment for sponsoring the video production team for both days!</p>
-              <h4>Livepeer</h4>
-              <a href="http://livepeer.org"><img src="/img/livepeer_600px.png" alt="Livepeer logo - livepeer.org" /></a>
-              <p>Thanks to Livepeer for donating transcoding credits and arranging a video production team in Berlin.</p>
+
+            <div className='donate-card card'>
+              <div className='card-body'>
+                <h4 className='card-title'>Privately</h4>
+
+                <p>Send directly to the donation address <strong className="donation-address mono">{donationAddress}</strong></p>
+
+                <img
+                  src="/img/0x85cab7143ff3c01b93e88f5b017692374bb939c2.png"
+                  className="qr-code"
+                  alt="Donation QR Code"
+                />
+              </div>
             </div>
-          
+
+            <div className="row">
+              <div className='col text-center'>
+                <h2>Offchain Thanks</h2>
+                <h4 className='text-muted'>Thanks to those of you supporting us offchain in various ways.</h4>
+              </div>
+            </div>
+
+            <div className='sponsor'>
+              <div className='row'>
+                <div className='col-sm-3'>
+                  <a
+                    href="http://web3.foundation"
+                    target="_blank"
+                        rel="noopener noreferrer">
+                      <div className='logo web3-logo' />
+                  </a>
+                </div>
+                <div className='col-sm-9'>
+                  <p>Thank you to Web3 Foundation for being our <strong>Host Company</strong> for the Berlin Council, handling logistics, payment, and breakfast & lunch both days.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className='sponsor'>
+              <div className='row'>
+                <div className='col-sm-3'>
+                  <a target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://santiment.net/">
+                      <div className='logo santiment-logo' />
+                  </a>
+                </div>
+                <div className='col-sm-9'>
+                  <p>Thank you to Santiment for sponsoring the video production team for both days!</p>
+                </div>
+              </div>
+            </div>
+
+            <div className='sponsor'>
+              <div className='row'>
+                <div className='col-sm-3'>
+                  <a href="http://livepeer.org" target="_blank"
+                        rel="noopener noreferrer">
+                    <div className='logo livepeer-logo' />
+                  </a>
+                </div>
+                <div className='col-sm-9'>
+                  <p>Thanks to Livepeer for donating transcoding credits and arranging a video production team in Berlin.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div {...responsiveness} className="flex-row d-flex amount">
-          <div className="flex-column margin">
-            <strong>Amount donated </strong>
-            <h3>{this.state.totalAmount} ETH</h3>
-          </div>
-          <div className="flex-column margin">
-            <form className="Search">
-              <input
-                type="text"
-                onChange={this.onSearchChange}
-                placeholder="filter leaderboard"
-              />
-            </form>
-          </div>
+        <div className='jumbotron'>
+          <h1 className='text-center'>{this.state.totalAmount} ETH Donated</h1>
         </div>
 
-        <div className="flex-column leaderboard">
-          <table className="table">
-            <thead className="pagination-centered">
-              <tr>
-                <th>Rank</th>
-                <th>Address</th>
-                <th>Value</th>
-                <th>Message</th>
-                <th>Tx Link</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.state.ethlist
-                .filter(isSearched(this.state.searchTerm))
-                .map(item => (
-                  <tr key={item.hash} className="Entry">
-                    <td>{item.rank} </td>
-                    <td>{item.from} </td>
-                    <td>{myweb3.utils.fromWei(item.value)} ETH</td>
-                    <td>
-                      <Emojify>{myweb3.utils.hexToAscii(item.input)}</Emojify>
-                    </td>
-                    <td>
-                      {item.hash.map((txHash, index) => (
-                        <a
-                          key={index}
-                          href={"https://etherscan.io/tx/" + txHash}
-                        >
-                          [{index + 1}]
-                        </a>
-                      ))}
-                    </td>
+        <div className='row'>
+          <div className="col-sm-12">
+            <div className='table-responsive'>
+              <table className="table table-striped table-hover table-bordered">
+                <thead className="pagination-centered">
+                  <tr>
+                    <th>Rank</th>
+                    <th>Address</th>
+                    <th>Value</th>
+                    <th>Message</th>
+                    <th>Tx Link</th>
                   </tr>
-                ))}
-            </tbody>
-          </table>
+                </thead>
+                <tbody>
+                  {this.state.ethlist
+                    .filter(isSearched(this.state.searchTerm))
+                    .map(item => (
+                      <tr key={item.hash} className="Entry">
+                        <td>{item.rank} </td>
+                        <td className='mono'>{item.from} </td>
+                        <td>{myweb3.utils.fromWei(item.value)} ETH</td>
+                        <td>
+                          <Emojify>{myweb3.utils.hexToAscii(item.input)}</Emojify>
+                        </td>
+                        <td>
+                          {item.hash.map((txHash, index) => (
+                            <a
+                              key={index}
+                              href={"https://etherscan.io/tx/" + txHash}
+                            >
+                              [{index + 1}]
+                            </a>
+                          ))}
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -1,199 +1,117 @@
-* {
-  font-family: Roboto, Arial, sans-serif;
+body {
+  font-family: 'Cardo', serif;
+}
+
+small {
+  font-size: 0.65em;
+}
+
+.cursive {
+  font-family: 'Fondamento', cursive;
+}
+
+.big-title {
+  font-size: 4em;
+}
+
+h2 {
+  margin: 2rem 0;
+}
+
+.jumbotron {
+  background-color: inherit;
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 4rem 2rem 2rem 2rem;
+  }
+}
+
+.donate-card + .donate-card {
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background-color: #ffa83c;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #fd8c00;
+}
+
+.mono {
+  font-family: 'PT Mono', monospace;
+}
+
+.sparkle {
+  max-width: 60px;
+}
+
+.logo {
+  width: 100%;
+  height: 55px;
+}
+
+.web3-logo {
+  background-image: url('/img/web3logo.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.santiment-logo {
+  background-image: url('/img/santiment_logo_onwhite_500px.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.livepeer-logo {
+  background-image: url('/img/livepeer_600px.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 a {
-  color: rgb(201, 157, 102);
-  text-decoration: underline;
+  color: #fda838;
 }
 
-form {
-  justify-content: center;
-  display: inline-flex;
-  flex-wrap: wrap;
+a:hover {
+  color: #e2860c;
 }
 
-h1 {
-  margin-left: auto;
-  margin-right: auto;
+a:visited {
+  color: #ffcf32;
 }
 
-h1, h2 {
-  padding: 1rem;
-  font-family: Roboto, Arial, sans-serif;
-  font-weight: 200;
-  text-align: center;
+.dropcap {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #f9bb5a;
+  padding: 0 .5rem 0 0;
+  margin: -0.5rem -0rem -1.9rem;
+  float: left;
+  font-family: 'Fondamento', cursive;
 }
 
-h3 {
-  font-weight: 600;
-  font-size: 2rem;
-  color: rgb(201, 157, 102);
-}
-
-h4, h6 {
-  padding: 0.5rem;
-  font-family: Roboto, Arial, sans-serif;
-  font-weight: 200;
-  text-align: center;
-}
-
-hr {
-  background-color: #bebebe;
-}
-
-input {
-  background-color: #ECF0F1;
-  border-color: rgb(201, 157, 102);
-  color: #222222;
-  margin: 0.5rem;
-}
-
-li {
-  margin: 1rem;
-  display: block;
-}
-
-p {
-  padding-top: 0.5rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-bottom: 0.5rem;
-}
-
-ol {
-  padding-top: 0.5rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-bottom: 0.5rem;
-  line-height: 2rem;
-  display: inline-block;
-  max-width: 800px;
-}
-
-thead {
-    background-color: rgba(201, 157, 102, 0.7);
-}
-
-.table th {
-  border: 0px;
-}
-
-.table td {
-  border-color: #222222;
-}
-
-.App {
-  /**
-  background-image: url('/img/dappnode-background.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
-  position: sticky;
-  **/
-
-background-color: #ECF0F1; 
-
-max-width: 100vw;
-  min-height: 100vh;
-  padding: 0px;
-  margin: 0px;
-}
-
-.btn {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  min-width: 10vw;
-  height: 2.5rem;
-  align-self: center;
-}
-
-.color-main-accent {
-  color: rgb(201, 157, 102);
-}
-
-.container-fluid {
-  padding: 0px;
-  margin: 0px;
-  max-width: 99vw;
-}
-
-.flex-column {
-  margin: 2rem, 2.5rem, 2rem, 2.5rem;
-}
-
-.icon {
-  width: 32px;
-  height: 32px;
-}
-
-.row, .flex-row {
-  max-width: 99vw;
-  padding-bottom: 1rem;
-}
-
-.Entry {
-  background-color: white;
-  color: #5a5a5a;
-  border-color: #c99d66;;
-}
-
-.Search {
-  padding: 0px;
-  margin: 0px;
-}
-
-.typelogo {
-  padding: 2rem 2rem 2rem 2rem;
-  max-height: 33vh;
-}
-
-.amount {
-  display: flex-wrap;
-  justify-content: center;
-}
-
-.margin {
-  margin: 1rem;
-}
-
-.margin-left {
-  margin-left: 1rem;
-}
-
-.donationColumn {
-  /**background-color: rgba(201, 157, 102, 0.7);
-  color: white;**/
-  justify-content: center;
-  text-align: center;
+.sponsor {
   margin-top: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding-bottom: 0.5rem;
 }
 
-.introContainer {
-  padding-bottom: 0.5rem;
+.smallcaps {
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 1.1em;
+  color: #221f20;
 }
 
-.leaderboard {
-  overflow-x: auto;
-}
-
-.qr-code {
-  width: 15vw;
-  height: auto;
-  padding: 0.5rem;
-}
-
-.word-wrap {
-  font-size: 0.9rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 500;
-  text-overflow: ellipsis;
-}
-
-.donation-address {
-  color: rgb(201, 157, 102);
+@media screen and (max-width: 767px) {
+  .xs-font-sm {
+    font-size: 0.7em;
+  }
 }
