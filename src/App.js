@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-import { css } from "glamor";
 import Web3 from "web3";
 import Emojify from "react-emojione";
 
@@ -246,28 +244,6 @@ class App extends Component {
   };
 
   render = () => {
-    const candonate = this.state.candonate;
-
-    const responsiveness = css({
-      "@media(max-width: 700px)": {
-        "flex-wrap": "wrap"
-      }
-    });
-
-    const hiddenOnMobile = css({
-      "@media(max-width: 700px)": {
-        display: "none"
-      }
-    });
-
-    const responsiveOl = css({
-      "@media (max-width: 1200px)": {
-        "padding-left": "0.5rem",
-        "padding-right": "0.5rem",
-        "max-width": "100%"
-      }
-    });
-
     return (
       <div className="App container">
         <div class="jumbotron jumbotron-fluid">
@@ -404,58 +380,6 @@ class App extends Component {
                   className="qr-code"
                   alt="Donation QR Code"
                 />
-              </div>
-            </div>
-
-            <div className="row">
-              <div className='col text-center'>
-                <h2>Offchain Thanks</h2>
-                <h4 className='text-muted'>Thanks to those of you supporting us offchain in various ways.</h4>
-              </div>
-            </div>
-
-            <div className='sponsor'>
-              <div className='row'>
-                <div className='col-sm-3'>
-                  <a
-                    href="http://web3.foundation"
-                    target="_blank"
-                        rel="noopener noreferrer">
-                      <div className='logo web3-logo' />
-                  </a>
-                </div>
-                <div className='col-sm-9'>
-                  <p>Thank you to Web3 Foundation for being our <strong>Host Company</strong> for the Berlin Council, handling logistics, payment, and breakfast & lunch both days.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className='sponsor'>
-              <div className='row'>
-                <div className='col-sm-3'>
-                  <a target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://santiment.net/">
-                      <div className='logo santiment-logo' />
-                  </a>
-                </div>
-                <div className='col-sm-9'>
-                  <p>Thank you to Santiment for sponsoring the video production team for both days!</p>
-                </div>
-              </div>
-            </div>
-
-            <div className='sponsor'>
-              <div className='row'>
-                <div className='col-sm-3'>
-                  <a href="http://livepeer.org" target="_blank"
-                        rel="noopener noreferrer">
-                    <div className='logo livepeer-logo' />
-                  </a>
-                </div>
-                <div className='col-sm-9'>
-                  <p>Thanks to Livepeer for donating transcoding credits and arranging a video production team in Berlin.</p>
-                </div>
               </div>
             </div>
           </div>
