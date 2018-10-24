@@ -71,7 +71,6 @@ class App extends Component {
     }.bind(this);
     ws.onmessage = function(evt) {
       let eventData = JSON.parse(evt.data);
-      console.log(eventData);
       if (eventData.event === "txlist") {
         let newTransactionsArray = this.state.transactionsArray.concat(
           eventData.result
@@ -178,12 +177,19 @@ class App extends Component {
         }
         if (typeof acc[cur.from] === "undefined") {
           acc[cur.from] = {
+            blockNumber: cur.blockNumber,
+            timeStamp: cur.timeStamp,
             from: cur.from,
             value: new myweb3.utils.BN(0),
             input: cur.input,
             hash: []
           };
         }
+        
+        // format the date
+        var date = new Date(acc[cur.from].timeStamp * 1000);
+        acc[cur.from].dateString = date.toDateString();
+
         acc[cur.from].value = cur.value.add(acc[cur.from].value);
         acc[cur.from].input =
           cur.input !== "0x" && cur.input !== "0x00"
@@ -195,8 +201,12 @@ class App extends Component {
     filteredEthList = Object.keys(filteredEthList)
       .map(val => filteredEthList[val])
       .sort((a, b) => {
+        //console.log(a.timeStamp);
         // sort greatest to least
-        return b.value.cmp(a.value);
+        //return b.value.cmp(a.value);
+        
+        // sort by timeStamp
+        return a.timeStamp>b.timeStamp ? -1 : a.timeStamp<b.timeStamp ? 1 : 0;
       })
       .map((obj, index) => {
         // add rank
@@ -395,11 +405,11 @@ class App extends Component {
               <table className="table table-striped table-hover table-bordered">
                 <thead className="pagination-centered">
                   <tr>
-                    <th>Rank</th>
-                    <th>Address</th>
-                    <th>Value</th>
-                    <th>Message</th>
-                    <th>Tx Link</th>
+                    <th width="15%">Txn Date</th>
+                    <th width="10%">Address</th>
+                    <th width="20%">Value</th>
+                    <th width="45%">Message</th>
+                    <th width="10%">Txn Link</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -407,8 +417,8 @@ class App extends Component {
                     .filter(isSearched(this.state.searchTerm))
                     .map(item => (
                       <tr key={item.hash} className="Entry">
-                        <td>{item.rank} </td>
-                        <td className='mono'>{item.from} </td>
+                        <td>{item.dateString} </td>
+                        <td className='mono'>{item.from.substr(0,8)}...</td>
                         <td>{myweb3.utils.fromWei(item.value)} ETH</td>
                         <td>
                           <Emojify>{myweb3.utils.hexToAscii(item.input)}</Emojify>
@@ -418,8 +428,10 @@ class App extends Component {
                             <a
                               key={index}
                               href={"https://etherscan.io/tx/" + txHash}
+                              target="_new"
+                              class="mono"
                             >
-                              [{index + 1}]
+                              {txHash.substr(0,8)}...<br/>
                             </a>
                           ))}
                         </td>
