@@ -1,54 +1,118 @@
-.page {
-margin: 20px;
+body {
+  font-family: 'Cardo', serif;
 }
-.interactions {
-text-align: center;
+
+small {
+  font-size: 0.65em;
 }
-.table {
-margin: 20px 0;
+
+.cursive {
+  font-family: 'Fondamento', cursive;
 }
-.table-header {
-display: flex;
-line-height: 24px;
-font-size: 16px;
-padding: 0 10px;
-justify-content: space-between;
+
+.big-title {
+  font-size: 4em;
 }
-.table-empty {
-margin: 200px;
-text-align: center;
-font-size: 16px;
+
+h2 {
+  margin: 2rem 0;
 }
-.table-row {
-display: flex;
-line-height: 24px;
-white-space: nowrap;
-margin: 10px 0;
-padding: 10px;
-background: #ffffff;
-border: 1px solid #e3e3e3;
+
+.jumbotron {
+  background-color: inherit;
+  margin-bottom: 0;
 }
-.table-header > span {
-overflow: hidden;
-text-overflow: ellipsis;
-padding: 0 5px;
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 4rem 2rem 2rem 2rem;
+  }
 }
-.table-row > span {
-overflow: hidden;
-text-overflow: ellipsis;
-padding: 0 5px;
+
+.donate-card + .donate-card {
+  margin-top: 2rem;
 }
-.button-inline {
-border-width: 0;
-background: transparent;
-color: inherit;
-text-align: inherit;
--webkit-font-smoothing: inherit;
-padding: 0;
-font-size: inherit;
-cursor: pointer;
+
+.btn-primary {
+  background-color: #ffa83c;
+  border: none;
 }
-.button-active {
-border-radius: 0;
-border-bottom: 1px solid #38BB6C;
+
+.btn-primary:hover {
+  background-color: #fd8c00;
+}
+
+.mono {
+  font-family: 'PT Mono', monospace;
+  font-size: 0.95em;
+}
+
+.sparkle {
+  max-width: 60px;
+}
+
+.logo {
+  width: 100%;
+  height: 55px;
+}
+
+.web3-logo {
+  background-image: url('/img/web3logo.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.santiment-logo {
+  background-image: url('/img/santiment_logo_onwhite_500px.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.livepeer-logo {
+  background-image: url('/img/livepeer_600px.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: #fda838;
+}
+
+a:hover {
+  color: #e2860c;
+}
+
+a:visited {
+  color: #ffcf32;
+}
+
+.dropcap {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #f9bb5a;
+  padding: 0 .5rem 0 0;
+  margin: -0.5rem -0rem -1.9rem;
+  float: left;
+  font-family: 'Fondamento', cursive;
+}
+
+.sponsor {
+  margin-top: 2rem;
+}
+
+.smallcaps {
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 1.1em;
+  color: #221f20;
+}
+
+@media screen and (max-width: 767px) {
+  .xs-font-sm {
+    font-size: 0.7em;
+  }
 }
